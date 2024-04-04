@@ -41,9 +41,7 @@ function StudentTable() {
                                     </Link>
                                 </td>
                                 <td>
-                                    {/* <Link to={`/delete/${index}`}> */}
                                     <Button variant="danger" onClick={e => handleDelete(index, e)}>Delete</Button>
-                                    {/* </Link> */}
                                 </td>
                             </tr>
                         )

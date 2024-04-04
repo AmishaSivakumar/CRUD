@@ -4,9 +4,9 @@ import { Newcontext } from '../Routing/Router'
 
 function View() {
     const [data, setData] = useContext(Newcontext)
-    const { details } = useParams()
+    const { id } = useParams()
     // console.log(index);
-    const viewData = data[details]
+    const viewData = data[id]
     return (
         <div className='m-5 '>
             <h1>Name: {viewData.name}</h1>

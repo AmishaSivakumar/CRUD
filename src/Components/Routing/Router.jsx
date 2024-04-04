@@ -5,7 +5,6 @@ import { students } from '../Table/Data'
 import View from '../Table/View'
 import Create from '../Table/Create'
 import Edit from '../Table/Edit'
-import Delete from '../Table/Delete'
 
 
 export const Newcontext = createContext()
@@ -18,10 +17,9 @@ function Router() {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' element={<StudentTable />} />
-                    <Route path='/view/:details' element={<View />} />
+                    <Route path='/view/:id' element={<View />} />
                     <Route path='/create' element={<Create />} />
-                    <Route path='/edit/:details' element={<Edit />} />
-                    <Route path='/delete/:details' element={<Delete />} />
+                    <Route path='/edit/:id' element={<Edit />} />
                 </Routes>
             </BrowserRouter>
         </Newcontext.Provider>

@@ -6,8 +6,8 @@ import { Button, Form } from 'react-bootstrap'
 function Edit() {
     const navigate = useNavigate()
     const [data, setData] = useContext(Newcontext)
-    const { details } = useParams()
-    const editData = data[details]
+    const { id } = useParams()
+    const editData = data[id]
     const [edit, setEdit] = useState(editData)
     const handleChange = (e) => {
         setEdit({ ...edit, [e.target.name]: e.target.value })
