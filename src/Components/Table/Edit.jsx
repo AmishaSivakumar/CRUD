@@ -20,7 +20,7 @@ function Edit() {
     }
     return (
         <div>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} >
                 <Form.Group className="mb-3" >
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" value={edit.name} onChange={handleChange} name='name' />

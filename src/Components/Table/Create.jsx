@@ -26,7 +26,7 @@ function Create() {
     }
     return (
         <div>
-            <Form>
+            <Form >
                 <Form.Group className="mb-3" >
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter name" onChange={handleChange} name='name' />
