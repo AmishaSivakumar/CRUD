@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Button, Form } from 'react-bootstrap'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { Newcontext } from '../Routing/Router'
 
 function Create() {
@@ -25,8 +25,10 @@ function Create() {
         // console.log(newData)
     }
     return (
-        <div>
-            <Form >
+        <div className='container mt-5'>
+            <h1 className='text-center'>CREATE</h1>
+            <hr />
+            <Form className='border border-dark p-5'>
                 <Form.Group className="mb-3" >
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" placeholder="Enter name" onChange={handleChange} name='name' />
@@ -42,6 +44,9 @@ function Create() {
                 <Button variant="primary" type="submit" onClick={handleSubmit}>
                     Submit
                 </Button>
+                <Link to={'/'} className='ms-3'>
+                    <Button variant="secondary"> Cancel</Button>
+                </Link>
             </Form>
         </div>
     )

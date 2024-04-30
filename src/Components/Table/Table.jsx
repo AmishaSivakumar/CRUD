@@ -9,10 +9,14 @@ function StudentTable() {
     const [data, setData] = useContext(Newcontext)
     // console.log(data);
     const handleDelete = (index, e) => {
-        setData(data.filter((v, i) => i !== index));
+        if (window.confirm("Are you sure to delete this item?")) {
+            setData(data.filter((v, i) => i !== index));
+        }
     }
     return (
-        <div>
+        <div className='container mt-5'>
+            <h1 className='text-center'>MARK LIST</h1>
+            <hr /> <br />
             <Table striped bordered hover>
                 <thead>
                     <tr>

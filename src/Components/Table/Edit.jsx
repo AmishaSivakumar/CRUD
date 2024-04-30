@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { Newcontext } from '../Routing/Router'
-import { useNavigate, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import { Button, Form } from 'react-bootstrap'
 
 function Edit() {
@@ -19,8 +19,10 @@ function Edit() {
         navigate('/')
     }
     return (
-        <div>
-            <Form onSubmit={handleSubmit} >
+        <div className='container mt-5'>
+            <h3 className='text-center'>EDIT</h3>
+            <hr /> <br />
+            <Form onSubmit={handleSubmit} className='border border-dark p-5'>
                 <Form.Group className="mb-3" >
                     <Form.Label>Name</Form.Label>
                     <Form.Control type="text" value={edit.name} onChange={handleChange} name='name' />
@@ -36,6 +38,9 @@ function Edit() {
                 <Button variant="primary" type="submit">
                     Submit
                 </Button>
+                <Link to={'/'} className='ms-3'>
+                    <Button variant="secondary"> Cancel</Button>
+                </Link>
             </Form>
         </div>
     )

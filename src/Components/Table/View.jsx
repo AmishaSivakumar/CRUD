@@ -8,11 +8,17 @@ function View() {
     // console.log(index);
     const viewData = data[id]
     return (
-        <div className='m-5 '>
-            <h1>Name: {viewData.name}</h1>
-            <h2>Class: {viewData.class}</h2>
-            <h3>Mark: {viewData.mark}</h3>
+        <div className="container mt-5">
+            <h3 className='text-center'>VIEW</h3>
+            <hr />
+            <div className='mt-5 p-5 bg-light shadow rounded'>
+                <h2 >Name: {viewData.name}</h2>
+                <h3>Class: {viewData.class}</h3>
+                <h3>Mark: {viewData.mark}</h3>
+            </div>
         </div>
+
+
     )
 }
 
