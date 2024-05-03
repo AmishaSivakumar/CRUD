@@ -14,7 +14,8 @@ function Edit() {
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newData = [...data, edit]
+        const newData = [...data]
+        newData[id] = edit;
         setData(newData)
         navigate('/')
     }
